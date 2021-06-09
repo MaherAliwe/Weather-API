@@ -1,6 +1,6 @@
 import React from "react";
-
 import clear from "../img/weather-icons/clear.svg";
+import "./../App.css";
 import "./Search.css";
 class Search extends React.Component {
   state = {
@@ -10,21 +10,14 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        {this.state.input}
-        <input
-          type="text"
-          id="input-name"
-          onChange={event => {
-            this.setState({ input: event.target.value });
-          }}
-        />
-        <button
-          onClick={event => {
-            this.props.handleInput(this.state.input);
-          }}
-        >
-          Say Hello
-        </button>
+       
+       <header className="app_header">
+         <form onSubmit = {this.props.getweather}  >
+           <input type="text" name="city" placeholder="Type in a city name" required></input>
+           <button type="submit" >FIND WEATHER</button>
+         </form>
+       </header>
+
       </div>
     );
   }
