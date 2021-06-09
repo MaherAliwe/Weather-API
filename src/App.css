@@ -4,22 +4,36 @@
   transition: background-color 1s ease-in;
 }
 
-.app__header,
-.app__main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
+  .app__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
 
 /*  Search bar */
-
+.app__header {
+  background-color: rgb(117, 158, 218);
+  padding: 2%;
+  margin: 0%;
+ }
+ 
 /* Current weather */
 
-div {
-  border: 5px solid red;
+body { 
+  font-family: raleway;
+  background-color: rgb(156, 206, 244)
 }
+
+/* Hourly weather */
+
+.container {
+  display: grid;
+  margin-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% 12%;
+  position: relative;
+}
+
